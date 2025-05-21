@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор строительства - Мари-Арт</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="imagesc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-12">
+        <div class="container-12">
+            <div class="logo-12">
+                <img src="images/logo1.svg" alt="Логотип компании" class="logo-image-14">
+                <span class="company-name">Строительная компания</span>
+                <span class="brand-name">Мари-Арт</span>
+            </div>
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <ul class="nav-list-12" id="navList">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">Информация</a></li>
+                <li><a href="otsivi.html">Отзывы</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calc.html">Калькулятор</a></li>
+                <li><button class="auth-btn10" id="authBtn10">Личный кабинет</button></li> 
+            </ul> 
+        </div>
+    </header>
+
+    <div class="maric-bg-wrapper">
+        <div class="maric-bg-image"></div>
+        <div class="maric-bg-overlay"></div>
+    </div>
+
+    <div class="maric-calc-wrapper">
+        <div class="maric-calc-container">
+            <div class="maric-calc-header">
+                <h1 class="maric-calc-title">Калькулятор строительства дома</h1>
+                <p class="maric-calc-subtitle">Рассчитайте точную стоимость вашего будущего дома</p>
+            </div>
+            
+                
+                <div id="basicTab" class="maric-tab-content" style="display: block;">
+                    <div class="maric-form-group full-width">
+                        <label for="area" class="maric-form-label">Площадь дома (кв. м)</label>
+                        <input type="number" id="area" class="maric-form-input" required min="20" max="1000" placeholder="Например: 120">
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="floors" class="maric-form-label">Количество этажей</label>
+                        <select id="floors" class="maric-form-select" required>
+                            <option value="1">1 этаж</option>
+                            <option value="2">2 этажа</option>
+                            <option value="3">3 этажа</option>
+                            <option value="4">4 этажа</option>
+                            <option value="5">5 этажей</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="houseType" class="maric-form-label">Тип дома</label>
+                        <select id="houseType" class="maric-form-select">
+                            <option value="standard">Стандартный</option>
+                            <option value="cottage">Коттедж</option>
+                            <option value="villa">Вилла</option>
+                            <option value="mansion">Особняк</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="roofType" class="maric-form-label">Тип крыши</label>
+                        <select id="roofType" class="maric-form-select">
+                            <option value="flat">Плоская</option>
+                            <option value="gable">Скатная</option>
+                            <option value="hip">Шатровая</option>
+                            <option value="mansard">Мансардная</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="wallMaterial" class="maric-form-label">Материал стен</label>
+                        <select id="wallMaterial" class="maric-form-select">
+                            <option value="brick">Кирпич</option>
+                            <option value="wood">Дерево</option>
+                            <option value="concrete">Бетон</option>
+                            <option value="foam">Пеноблоки</option>
+                            <option value="aeratedConcrete">Газобетон</option>
+                            <option value="sipPanels">СИП-панели</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="advancedTab" class="maric-tab-content">
+                    <div class="maric-form-group">
+                        <label for="foundationType" class="maric-form-label">Тип фундамента</label>
+                        <select id="foundationType" class="maric-form-select">
+                            <option value="strip">Ленточный</option>
+                            <option value="pile">Свайный</option>
+                            <option value="slab">Плита</option>
+                            <option value="column">Столбчатый</option>
+                            <option value="deepStrip">Глубокозаглубленный ленточный</option>
+                            <option value="pileGrillage">Свайно-ростверковый</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="finishingMaterial" class="maric-form-label">Материал отделки</label>
+                        <select id="finishingMaterial" class="maric-form-select">
+                            <option value="plaster">Штукатурка</option>
+                            <option value="paint">Краска</option>
+                            <option value="tile">Плитка</option>
+                            <option value="woodPanel">Деревянные панели</option>
+                            <option value="stone">Камень</option>
+                            <option value="ventilatedFacade">Вентилируемый фасад</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="windowsType" class="maric-form-label">Тип окон</label>
+                        <select id="windowsType" class="maric-form-select">
+                            <option value="plastic">Пластиковые</option>
+                            <option value="wooden">Деревянные</option>
+                            <option value="aluminum">Алюминиевые</option>
+                            <option value="energySaving">Энергосберегающие</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="heatingType" class="maric-form-label">Тип отопления</label>
+                        <select id="heatingType" class="maric-form-select">
+                            <option value="gas">Газовое</option>
+                            <option value="electric">Электрическое</option>
+                            <option value="solidFuel">Твердотопливное</option>
+                            <option value="heatPump">Тепловой насос</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group">
+                        <label for="sewageType" class="maric-form-label">Канализация</label>
+                        <select id="sewageType" class="maric-form-select">
+                            <option value="central">Центральная</option>
+                            <option value="septic">Септик</option>
+                            <option value="biological">Биологическая очистка</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="servicesTab" class="maric-tab-content">
+                    <div class="maric-form-group full-width">
+                        <label class="maric-form-label">Дополнительные услуги</label>
+                        <div class="maric-checkbox-group">
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="designProject" value="designProject"> Проектирование
+                                <span class="maric-checkbox-cost">+50 000 руб.</span>
+                            </label>
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="landscapeDesign" value="landscapeDesign"> Ландшафтный дизайн
+                                <span class="maric-checkbox-cost">+75 000 руб.</span>
+                            </label>
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="interiorDesign" value="interiorDesign"> Дизайн интерьера
+                                <span class="maric-checkbox-cost">+60 000 руб.</span>
+                            </label>
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="smartHome" value="smartHome"> Умный дом
+                                <span class="maric-checkbox-cost">+120 000 руб.</span>
+                            </label>
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="securitySystem" value="securitySystem"> Охранная система
+                                <span class="maric-checkbox-cost">+45 000 руб.</span>
+                            </label>
+                            <label class="maric-checkbox-label">
+                                <input type="checkbox" id="fireplace" value="fireplace"> Камин
+                                <span class="maric-checkbox-cost">+85 000 руб.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="maric-form-group full-width">
+                        <label for="constructionTime" class="maric-form-label">Срок строительства (мес.)</label>
+                        <select id="constructionTime" class="maric-form-select">
+                            <option value="6">6 месяцев</option>
+                            <option value="9" selected>9 месяцев</option>
+                            <option value="12">12 месяцев</option>
+                            <option value="18">18 месяцев</option>
+                            <option value="24">24 месяца</option>
+                            <option value="custom">Индивидуальный график</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maric-form-group full-width">
+                        <label for="paymentMethod" class="maric-form-label">Способ оплаты</label>
+                        <select id="paymentMethod" class="maric-form-select">
+                            <option value="full">Полная предоплата</option>
+                            <option value="installment">Рассрочка</option>
+                            <option value="bankCredit">Банковский кредит</option>
+                            <option value="stagePayment">Поэтапная оплата</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="maric-form-actions">
+                    <button type="button" class="maric-form-button secondary" onclick="resetForm()">Сбросить</button>
+                    <button type="button" class="maric-form-button" onclick="calculateCost()">Рассчитать стоимость</button>
+                    <button type="button" class="maric-form-button tertiary" onclick="saveDraft()">Сохранить черновик</button>
+                </div>
+            </form>
+
+            <div class="maric-results" id="result" style="display: none;">
+                <h3 class="maric-results-title">Результаты расчета</h3>
+                <div class="maric-results-grid">
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Площадь дома:</span>
+                        <span class="maric-result-value" id="resultArea">0 кв.м</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Этажность:</span>
+                        <span class="maric-result-value" id="resultFloors">0</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Тип дома:</span>
+                        <span class="maric-result-value" id="resultHouseType">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Тип крыши:</span>
+                        <span class="maric-result-value" id="resultRoof">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Материал стен:</span>
+                        <span class="maric-result-value" id="resultWalls">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Фундамент:</span>
+                        <span class="maric-result-value" id="resultFoundation">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Отделка:</span>
+                        <span class="maric-result-value" id="resultFinishing">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Окна:</span>
+                        <span class="maric-result-value" id="resultWindows">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Отопление:</span>
+                        <span class="maric-result-value" id="resultHeating">-</span>
+                    </div>
+                    <div class="maric-result-item">
+                        <span class="maric-result-label">Канализация:</span>
+                        <span class="maric-result-value" id="resultSewage">-</span>
+                    </div>
+                    <div class="maric-result-item full-width">
+                        <span class="maric-result-label">Дополнительные услуги:</span>
+                        <span class="maric-result-value" id="resultServices">-</span>
+                    </div>
+                    <div class="maric-result-total">
+                        <span class="maric-result-label">Итоговая стоимость:</span>
+                        <span class="maric-result-value" id="resultTotal">0 руб.</span>
+                    </div>
+                    <div class="maric-result-discount">
+                        <span class="maric-result-label">Ваша скидка:</span>
+                        <span class="maric-result-value" id="resultDiscount">0% (0 руб.)</span>
+                    </div>
+                    <div class="maric-result-final">
+                        <span class="maric-result-label">К оплате:</span>
+                        <span class="maric-result-value" id="resultFinal">0 руб.</span>
+                    </div>
+                </div>
+                
+                <div class="maric-result-actions">
+                    <button class="maric-form-button secondary" onclick="printCalculation()">Распечатать</button>
+                    <button class="maric-form-button" onclick="showContactForm()">Сохранить расчет</button>
+                    <button class="maric-form-button tertiary" onclick="sendByEmail()">Отправить на email</button>
+                </div>
+                
+                <div class="maric-payment-options">
+                    <h4>Варианты оплаты:</h4>
+                    <div class="maric-payment-methods">
+                        <div class="maric-payment-method">
+                            <h5>100% предоплата</h5>
+                            <p>Скидка 5%</p>
+                            <p id="paymentFull">0 руб.</p>
+                        </div>
+                        <div class="maric-payment-method">
+                            <h5>Рассрочка 12 мес.</h5>
+                            <p>Без переплаты</p>
+                            <p id="paymentInstallment">0 руб./мес</p>
+                        </div>
+                        <div class="maric-payment-method">
+                            <h5>Кредит 5 лет</h5>
+                            <p>Ставка 8.9%</p>
+                            <p id="paymentCredit">0 руб./мес</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maric-contact-form" id="contactForm" style="display: none;">
+                <h3 class="maric-results-title">Сохранить расчет</h3>
+                <div class="maric-calc-form">
+                    <div class="maric-form-group full-width">
+                        <label for="fullName" class="maric-form-label">ФИО</label>
+                        <input type="text" id="fullName" class="maric-form-input" required>
+                    </div>
+                    <div class="maric-form-group full-width">
+                        <label for="email" class="maric-form-label">Email</label>
+                        <input type="email" id="email" class="maric-form-input" required>
+                    </div>
+                    <div class="maric-form-group full-width">
+                        <label for="phone" class="maric-form-label">Телефон</label>
+                        <input type="tel" id="phone" class="maric-form-input" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="maric-form-group full-width">
+                        <label for="comment" class="maric-form-label">Комментарий</label>
+                        <textarea id="comment" class="maric-form-textarea" rows="3"></textarea>
+                    </div>
+                    <div class="maric-form-actions">
+                        <button type="button" class="maric-form-button secondary" onclick="hideContactForm()">Отмена</button>
+                        <button type="button" id="submitContact" class="maric-form-button" onclick="submitContact()">Сохранить расчет</button>
+                    </div>
+                </div>
+            </div>
+
+
+                <ul class="maric-saved-list" id="savedCalculations">
+                    <li class="maric-saved-item empty">Нет сохраненных расчетов</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">Информация</a>
+                <a href="otsivi.html">Отзывы</a>
+                <a href="faq.html">FAQ</a>
+                <a href="calc.html">Калькулятор</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Строительная Компания "Мари-Арт". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="burger-menu.js"></script>
+    <script src="jsdop/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+    <script src="scripts.js"></script>
+        <script src="auth23.js"></script>
+</body>
+</html>
